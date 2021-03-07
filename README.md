@@ -22,8 +22,6 @@ n=f3.read()
 f2=open("que.txt","a")
 f2.write(n)
 
-
-
 f.close()
 f1.close()
 f2.close()
