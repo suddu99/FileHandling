@@ -1,32 +1,30 @@
-#read the first file
-f=open("qn.txt","r")
+import sys
+import os
+import fileinput
 
-#read the second file
-f1=open("qn1.txt","r")
+# read the first file
+file1 = open("usermanual.txt", "r")
+# read the second file
+file2 = open("usermanual1.txt", "r+")
+#open third file
+file3 = open("usermanual2.txt", "w")
+# copy contents of first in second
+op = input("Which feature to execute?")
+if op == "copy":
+    for data in file1:
+        file2.write(data)
+#replace a particular word in the file
+elif op == "replaceWord":
+    file2 = open("usermanual1.txt", "rt")
+    word1 = str(input("Enter word to be replaced"))
+    word2 = str(input("Enter the new word"))
+    for line in file2:
+        file3.write(line.replace(word1, word2))
+    file2.close()
+file1.close()
+file2.close()
+file3.close()
 
-#Create a thrid file
-f2=open("que.txt","w")
-
-#copy contents of first and second into third file
-for i in f:
-    f2.write(i)
-for j in f1:
-    f2.write(j)
-
-#read the 4th file
-f3=open("qn2.txt","r")
-n=f3.read()
-
-#append the contents of f3 to f2
-f2=open("que.txt","a")
-f2.write(n)
-
-
-
-f.close()
-f1.close()
-f2.close()
-f3.close()
 
 
 
