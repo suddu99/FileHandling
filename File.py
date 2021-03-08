@@ -40,9 +40,12 @@ elif op == "lower":
     for letter in file2:
         file3.write(letter.lower())
     file2.close()
+else:
+    print("No operation")
 file1.close()
 file2.close()
 file3.close()
+
 
 
 
