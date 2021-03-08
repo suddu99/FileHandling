@@ -21,7 +21,23 @@ elif op == "replaceWord":
     for line in file2:
         file3.write(line.replace(word1, word2))
     file2.close()
+#length of the string
+elif op == "len":
+    file2 = open("usermanual1.txt","rt")
+    n=file2.read()
+    l=len(n)
+    print("Length of file ",l)
+    file2.close()
+#convert to upper case
+elif op == "upper":
+    file2 = open("usermanual1.txt","rt")
+    for letter in file2:
+        file3.write(letter.upper())
+
+    file2.close()
 file1.close()
 file2.close()
 file3.close()
+
+
 
