@@ -33,11 +33,18 @@ elif op == "upper":
     file2 = open("usermanual1.txt","rt")
     for letter in file2:
         file3.write(letter.upper())
-
+    file2.close()
+#conver to lower case
+elif op == "lower":
+    file2 = open("usermanual1.txt","rt")
+    for letter in file2:
+        file3.write(letter.lower())
     file2.close()
 file1.close()
 file2.close()
 file3.close()
+
+
 
 
 
